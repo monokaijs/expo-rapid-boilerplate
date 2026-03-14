@@ -1,4 +1,4 @@
-import { AppColors } from './config/colors';
+import { AppColors } from './lib/config/colors';
 
 function toKebab(key) {
   return key
@@ -15,7 +15,7 @@ const colorsConfig = Object.fromEntries(
 );
 
 export const darkMode = 'class';
-export const content = ['./app/**/*.{js,jsx,ts,tsx}', './components/**/*.{js,jsx,ts,tsx}'];
+export const content = ['./app/**/*.{js,jsx,ts,tsx}', './lib/components/**/*.{js,jsx,ts,tsx}'];
 export const presets = [require('nativewind/preset')];
 export const theme = {
   extend: {

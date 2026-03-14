@@ -1,4 +1,4 @@
-import {AppColors, AppColorsLight} from "../config/colors.ts";
+import {AppColors, AppColorsLight} from "@/config/colors";
 import {useAppSelector} from "@/store/hooks.ts";
 
 export function useColors() {

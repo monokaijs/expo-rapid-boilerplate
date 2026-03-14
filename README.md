@@ -1,38 +1,63 @@
 # Expo Rapid Boilerplate
-Expo Rapid Boilerplate is a production-ready React Native boilerplate designed to accelerate your mobile app development with best practices and modern tools. This boilerplate is built on top of Expo, a powerful and flexible platform for building universal React Native apps.
 
-## Features
-- **Expo**: Utilizes Expo for a seamless development experience, including support for both iOS and Android platforms.
-- **Tailwind CSS**: Leverages Tailwind CSS for efficient and maintainable styling.
-- **TypeScript**: Built with TypeScript for enhanced code quality and maintainability.
-- **Redux Toolkit**: Utilizes Redux Toolkit for state management.
-- **i18next**: Supports internationalization with i18next.
-- **Testing**: Includes testing setup with Jest and React Native Testing Library.
-- **Linting and Formatting**: Uses ESLint and Prettier for code quality and consistency.
-- **CI/CD**: Ready for continuous integration and deployment with GitHub Actions.
+A production-ready Expo boilerplate with opinionated structure and essential libraries pre-configured.
+
+## Tech Stack
+
+- **Expo SDK 55** — React Native 0.83, React 19.2
+- **Expo Router** — File-based navigation
+- **NativeWind** — TailwindCSS for React Native
+- **Redux Toolkit + MMKV** — State management with persisted storage
+- **i18next** — Internationalization
+- **Zod** — Schema validation
+- **Lucide Icons** — Icon library
+
+## Project Structure
+
+```
+├── app/                    # Expo Router screens
+│   ├── (tabs)/             # Tab navigation
+│   └── _layout.tsx         # Root layout
+├── lib/                    # Project source code
+│   ├── assets/             # Images, fonts, etc.
+│   ├── components/         # Reusable components
+│   │   ├── helpers/        # Helper components (insets, language)
+│   │   ├── navigation/     # Navigation components (tab bar, header)
+│   │   └── ui/             # UI primitives (Button, Input, Text, etc.)
+│   ├── config/             # App configuration
+│   │   ├── colors.ts       # Color palette (dark + light)
+│   │   ├── global.css      # Global styles
+│   │   ├── i18n.ts         # i18n setup
+│   │   └── locales/        # Translation files
+│   ├── hooks/              # Custom hooks
+│   ├── store/              # Redux store + slices
+│   └── utils/              # Utility functions
+├── scripts/                # Build/dev scripts
+└── app.json                # Expo config
+```
 
 ## Getting Started
-To get started with Expo Rapid Boilerplate, follow these steps:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/monokaijs/expo-rapid-boilerplate.git
-   ```
+```bash
+# Install dependencies
+yarn install
 
-2. Install dependencies:
-   ```bash
-   yarn install
-   ```
+# Start the dev server
+yarn start
 
-3. Start the development server:
-   ```bash
-   yarn start
-   ```
+# Run on iOS
+yarn ios
 
-4. Follow the instructions provided by Expo to run the app on your device or emulator.
+# Run on Android
+yarn android
+```
 
-## Documentation
-For more detailed information on how to use Expo Rapid Boilerplate, please refer to the [documentation](https://your-docs-url.com).
+## Path Aliases
 
-## License
-This project is licensed under the MIT License.
+The `@/` alias resolves to `./lib/`, so imports look like:
+
+```typescript
+import { AppText } from '@/components/ui';
+import { useColors } from '@/hooks/useColors';
+import { store } from '@/store';
+```

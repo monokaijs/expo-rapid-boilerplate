@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "my-expo-app",
-    "slug": "my-expo-app",
+    "name": "My App",
+    "slug": "my-app",
     "version": "1.0.0",
-    "scheme": "myexpoapp",
+    "scheme": "myapp",
     "web": {
-      "favicon": "./assets/favicon.png",
+      "favicon": "./lib/assets/favicon.png",
       "bundler": "metro"
     },
     "experiments": {
@@ -13,14 +13,13 @@
     },
     "plugins": [
       "expo-router",
-      "expo-localization",
-      "react-native-localize"
+      "expo-localization"
     ],
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./lib/assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./lib/assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -29,14 +28,17 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.myexpoapp"
+      "bundleIdentifier": "com.example.myapp",
+      "config": {
+        "usesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./lib/assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.myexpoapp"
+      "package": "com.example.myapp"
     }
   }
 }

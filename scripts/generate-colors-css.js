@@ -6,8 +6,8 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const COLORS_SOURCE = resolve(__dirname, '../config/colors.ts');
-const OUT_CSS = resolve(__dirname, '../config/generated/colors.css');
+const COLORS_SOURCE = resolve(__dirname, '../lib/config/colors.ts');
+const OUT_CSS = resolve(__dirname, '../lib/config/generated/colors.css');
 
 function hexToRgbTriplet(hex) {
   if (!hex) return null;
